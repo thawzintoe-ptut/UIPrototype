@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/mapFragment"
+      android:enabled="true"
+      android:icon="@drawable/ic_bottom_nav_car_selector"
+      android:title="@string/label_navigation_rent_a_car"
+      android:orderInCategory="1"
+      app:showAsAction="always"
+      tools:ignore="AlwaysShowAction" />
+  <item
+      android:id="@+id/bookingsFragment"
+      android:enabled="true"
+      android:icon="@drawable/ic_bottom_nav_booking_selector"
+      android:title="@string/label_navigation_booking"
+      android:orderInCategory="2"
+      app:showAsAction="always"/>
+  <item
+      android:id="@+id/referAFriend"
+      android:enabled="true"
+      android:icon="@drawable/ic_bottom_nav_refer_selector"
+      android:title="@string/label_navigation_refer"
+      android:orderInCategory="3"
+      app:showAsAction="always"/>
+  <item
+      android:id="@+id/inboxFragment"
+      android:enabled="true"
+      android:icon="@drawable/ic_bottom_nav_settings_selector"
+      android:title="@string/label_navigation_account"
+      android:orderInCategory="4"
+      app:showAsAction="always"/>
+
+</menu>

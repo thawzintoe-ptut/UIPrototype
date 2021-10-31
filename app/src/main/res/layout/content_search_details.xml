@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:id="@+id/searchResultCountTv"
+        android:layout_width="wrap_content"
+        android:textColor="@color/textColorRed"
+        style="@style/Bold2XL"
+        tools:text="300+"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchResultCountTv"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_xSmall"
+        android:id="@+id/searchResultCountUnitTv"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        style="@style/Light2XL"
+        android:text="@string/text_cars_found"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterBtn"
+        style="@style/MediumS"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/ripple_cardview_white"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/margin_xSmall"
+        app:layout_constraintEnd_toStartOf="@id/mapBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/btn_text_filter" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mapBtn"
+        style="@style/MediumS"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/ripple_cardview_white"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/btn_text_mao" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResultsRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/layout_car_item"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchResultCountUnitTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

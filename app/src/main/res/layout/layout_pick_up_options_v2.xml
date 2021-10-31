@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/addressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/addressIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icoaddress" />
+
+        <TextView
+            android:id="@+id/startingPointTitleTv"
+            style="@style/MediumS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/startingPointEditText"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_xSmall"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/hint_location"
+
+            android:textColor="@color/textColorGrey" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/startingPointEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_toEndOf="@id/addressIcon"
+            android:background="@drawable/ripple_cardview_color_primary"
+            android:backgroundTint="@color/transparent"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_small"
+            app:expandedHintEnabled="false"
+            app:hintTextAppearance="@style/HintTextStyle"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+
+                android:backgroundTint="@color/transparent"
+                android:maxLines="1"
+                android:text="Current Location"
+                android:textAppearance="@style/InputTextStyle"
+
+                android:textColor="@color/black"
+                tools:text="Current Location" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@color/textColorGrey"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:alpha="0.5"
+        android:background="@color/textColorGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/dateLayout"
+        app:layout_constraintStart_toEndOf="@id/dateLayout"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout" />
+
+    <RelativeLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/timeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timeLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout"
+        app:layout_constraintTop_toTopOf="@+id/timeLayout"
+        app:layout_constraintWidth_percent="0.5">
+
+        <ImageView
+            android:id="@+id/dateIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icodated" />
+
+        <TextView
+            android:id="@+id/dateAndTimeTitleTv"
+            style="@style/MediumS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/dateEditText"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_xSmall"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/hint_date_and_time"
+
+            android:textColor="@color/textColorGrey" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/dateIcon"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_small"
+            app:expandedHintEnabled="true"
+            app:hintTextAppearance="@style/HintTextStyle"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="?selectableItemBackground"
+                android:backgroundTint="@color/transparent"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/margin_large"
+                android:text="Now"
+                android:textAppearance="@style/InputTextStyle"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textColorGrey"
+                tools:text="Now" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/searchBtn"
+        app:layout_constraintEnd_toStartOf="@+id/searchBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dateLayout"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout"
+
+        app:layout_constraintWidth_percent="0.5">
+
+        <ImageView
+            android:id="@+id/timeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icotime" />
+        <TextView
+            android:id="@+id/timeTitleTv"
+            style="@style/MediumS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/timeEditText"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_xSmall"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/hint_duration"
+
+            android:textColor="@color/textColorGrey" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/timeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_toEndOf="@id/timeIcon"
+            android:background="?selectableItemBackground"
+            android:backgroundTint="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_small"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:expandedHintEnabled="true"
+            app:hintTextAppearance="@style/HintTextStyle"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:backgroundTint="@color/transparent"
+
+                android:maxLines="1"
+                android:paddingBottom="@dimen/margin_large"
+                android:text="1 hr"
+                android:textAppearance="@style/InputTextStyle"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textColorGrey"
+                tools:text="1 hr" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

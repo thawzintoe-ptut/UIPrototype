@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bookingIDTv"
+        style="@style/BoldL"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/toolbar"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:background="?selectableItemBackground"
+        android:drawableEnd="@drawable/ic_icoactioncopy"
+        android:drawablePadding="@dimen/margin_small"
+        android:gravity="center"
+        android:padding="@dimen/margin_2xSmall"
+        android:text="@string/sample_booking_id_44123331"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/carModelNumberTv"
+                style="@style/Bold2XL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:text="@string/car_data_tesla_model_s"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/carPlateTv"
+                style="@style/MediumXL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_2xSmall"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:text="SMS10000Z"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carModelNumberTv" />
+
+            <TextView
+                android:id="@+id/statusTv"
+                style="@style/RegularS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:background="@drawable/bg_status"
+                android:padding="@dimen/margin_2xSmall"
+                android:text="CONFIRMED"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/carPlateTv"
+                app:layout_constraintStart_toEndOf="@+id/carPlateTv"
+                app:layout_constraintTop_toTopOf="@+id/carPlateTv" />
+
+
+            <RelativeLayout
+                android:id="@+id/startDateLayout"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                app:layout_constraintEnd_toStartOf="@+id/endDateLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carPlateTv">
+                <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start date"
+                    style="@style/MediumS"
+                    android:textColor="@color/textColorGrey"/>
+                <TextView
+                    android:id="@+id/dateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:text="Mon , 1 Nov 20"
+                    style="@style/MediumL"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateTv"
+                    android:text="11:45 am"
+                    style="@style/MediumL"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/endDateLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toStartOf="@+id/durationLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/startDateLayout"
+               android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/carPlateTv">
+                <TextView
+                    android:id="@+id/etitleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End date"
+                    style="@style/MediumS"
+                    android:textColor="@color/textColorGrey"/>
+                <TextView
+                    android:id="@+id/edateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etitleTv"
+                    android:text="Tue , 2 Nov 20"
+                    style="@style/MediumL"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/etimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edateTv"
+                    android:text="11:45 am"
+                    style="@style/MediumL"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/durationLayout"
+                android:layout_width="0dp"
+                android:background="@drawable/bg_color_primary"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/endDateLayout"
+
+                app:layout_constraintTop_toBottomOf="@+id/carPlateTv">
+                <TextView
+                    android:id="@+id/dtitleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    style="@style/MediumS"
+                    android:textColor="@color/textColorGrey"/>
+                <TextView
+                    android:id="@+id/ddateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dtitleTv"
+                    android:text="02    :   00"
+                    style="@style/MediumL"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/dtimeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ddateTv"
+                    android:text="days       hours"
+                    style="@style/LightS"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_xSmall"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/carPictureTv"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/durationLayout"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+            <RelativeLayout
+                android:clickable="true"
+                android:id="@+id/totalCostBtn"
+                android:layout_width="match_parent"
+                 android:background="?selectableItemBackground"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/endDateLayout"
+
+                app:layout_constraintTop_toBottomOf="@+id/carPictureTv">
+                <TextView
+                    android:id="@+id/totalCostTitleTv"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EstimatedTotalCost"
+                    android:layout_marginTop="@dimen/margin_xSmall"
+                    style="@style/BoldN"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/noteTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalCostTitleTv"
+                    android:text="* Amount is not final"
+                    style="@style/MediumS"
+                    android:layout_marginBottom="@dimen/margin_small"
+
+                    android:textColor="@color/textColorGrey"/>
+
+                <TextView
+                    android:id="@+id/totalCostTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:text="$ 52.00 "
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+
+                    style="@style/MediumXL"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_xSmall"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_2xSmall"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:background="@color/textColorGrey"
+                app:layout_constraintTop_toBottomOf="@id/totalCostBtn"/>
+
+            <TextView
+                android:id="@+id/helpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:text="Need help ?"
+                android:clickable="true"
+                 android:background="?selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/totalCostBtn"
+                android:drawableEnd="@drawable/ic_help"
+                android:layout_marginTop="@dimen/margin_xSmall"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                style="@style/MediumL"
+                android:gravity="start|center"
+                android:layout_marginBottom="@dimen/margin_xSmall"
+                android:textColor="@color/black"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_2xSmall"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:background="@color/textColorGrey"
+                app:layout_constraintTop_toBottomOf="@id/helpBtn"/>
+
+            <TextView
+                android:id="@+id/cancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                 android:background="?selectableItemBackground"
+                android:text="Cancel this booking"
+                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/helpBtn"
+                android:drawableEnd="@drawable/ic_cancel"
+                android:layout_marginTop="@dimen/margin_xSmall"
+                android:layout_marginEnd="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                style="@style/MediumL"
+                android:focusable="true"
+                android:gravity="start|center"
+                android:layout_marginBottom="@dimen/margin_xSmall"
+                android:textColor="@color/black"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

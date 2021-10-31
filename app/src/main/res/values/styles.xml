@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="textInputStyle">@style/Widget.MyApp.TextInputLayout</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.MyApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintEnabled">true</item>
+        <item name="expandedHintEnabled">false</item>
+
+    </style>
+
+    <style name="HintTextStyle">
+        <item name="android:textColor">@color/textColorGrey</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="InputTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="BoldL">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="BoldXL" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+    <style name="Bold2XL">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_2XL_size</item>
+    </style>
+
+    <style name="BoldXS">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="BoldN">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="BoldS">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="RegularXL">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+
+    <style name="RegularL">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="RegularN">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="RegularS">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="RegularXS">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="RegularXXS">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XXS_size</item>
+    </style>
+
+    <style name="MediumL">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="Medium5XL">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_5XL_size</item>
+    </style>
+
+    <style name="MediumN">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="MediumXL">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+    <style name="Medium2XL">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_2XL_size</item>
+    </style>
+
+    <style name="MediumS">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="MediumXS">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="LightS">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="LightXS">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="LightN">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="LightL">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="Light2XL">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_2XL_size</item>
+    </style>
+</resources>

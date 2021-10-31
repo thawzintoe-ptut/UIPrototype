@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">UIPrototype</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_navigation_rent_a_car">Rent a car</string>
+    <string name="label_navigation_booking">Bookings</string>
+    <string name="label_navigation_refer">Refer a friend</string>
+    <string name="label_navigation_account">Account</string>
+    <string name="hint_location">Location</string>
+    <string name="btn_text_go">Go</string>
+    <string name="hint_date_and_time"><![CDATA[Date & Time]]></string>
+    <string name="hint_duration">Duration</string>
+    <string name="text_rent_a_car">Rent a car</string>
+    <string name="title_rental_fee">Rental fee</string>
+    <string name="title_milage_fee">Mileage fee</string>
+    <string name="text_cars_found">cars found</string>
+    <string name="text_seats_count">%1d Seater</string>
+    <string name="text_rental_fee">Fr. $ %1s /hr</string>
+    <string name="text_mileage_fee">$ %1s /km</string>
+    <string name="text_distance_from_here">%1s KM AWAY</string>
+    <string name="title_search_result">Search results</string>
+    <string name="car_data_tesla_model_s">Tesla Model S</string>
+    <string name="sample_booking_id_44123331">Booking ID : 44123331</string>
+    <string name="btn_text_filter">Filter</string>
+    <string name="btn_text_mao">Map</string>
+</resources>

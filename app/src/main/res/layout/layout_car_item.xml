@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:layout_height="100dp"
+        android:id="@+id/carProfileContainer">
+
+        <ImageView
+            android:id="@+id/carProfileIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/carTypeTv"
+        android:layout_width="wrap_content"
+        tools:text="Tesla M3"
+        style="@style/MediumXL"
+        android:layout_toEndOf="@id/carProfileContainer"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/white"
+        android:layout_alignTop="@id/carProfileContainer"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/carModelNumberTv"
+        android:layout_width="wrap_content"
+        tools:text="SMN7000B"
+        android:layout_below="@id/carTypeTv"
+        style="@style/LightN"
+        android:layout_marginTop="@dimen/margin_xSmall"
+        android:layout_toEndOf="@id/carProfileContainer"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dividerTv"
+        android:layout_width="wrap_content"
+        android:text="•"
+        android:layout_below="@id/carTypeTv"
+        style="@style/Bold2XL"
+        android:layout_marginTop="@dimen/margin_2xSmall"
+        android:layout_toEndOf="@id/carModelNumberTv"
+        android:layout_marginStart="@dimen/margin_xSmall"
+        android:textColor="@color/textColorRed"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/carSeatTv"
+        android:layout_width="wrap_content"
+        tools:text="7 Seater"
+        android:layout_below="@id/carTypeTv"
+        style="@style/LightN"
+        android:layout_marginTop="@dimen/margin_xSmall"
+        android:layout_toEndOf="@id/dividerTv"
+        android:layout_marginStart="@dimen/margin_xSmall"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/carDistanceTv"
+        android:layout_width="wrap_content"
+        tools:text="0.5KM AWAY"
+        android:layout_below="@id/carTypeTv"
+        android:paddingTop="@dimen/margin_2xSmall"
+        android:paddingBottom="@dimen/margin_2xSmall"
+        android:paddingStart="@dimen/margin_xSmall"
+        android:paddingEnd="@dimen/margin_xSmall"
+        android:layout_marginEnd="@dimen/margin_default"
+        style="@style/LightXS"
+        android:layout_toEndOf="@id/carSeatTv"
+        android:background="@drawable/bg_location"
+        android:layout_marginTop="@dimen/margin_xSmall"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/margin_xSmall"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/rentalFeeTitleTv"
+        android:layout_width="wrap_content"
+        android:text="@string/title_rental_fee"
+        android:layout_below="@id/carDistanceTv"
+        style="@style/BoldS"
+        android:layout_marginTop="@dimen/margin_xSmall"
+        android:layout_toEndOf="@id/carProfileContainer"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/textColorGrey"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/rentalFeeTv"
+        android:layout_width="wrap_content"
+        tools:text="Fr. $3.00/hr"
+        android:layout_below="@id/rentalFeeTitleTv"
+        style="@style/LightN"
+        android:layout_marginTop="@dimen/margin_2xSmall"
+        android:layout_toEndOf="@id/carProfileContainer"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/textColorWhite"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/mileageFeeTitleTv"
+        android:layout_width="wrap_content"
+        android:text="@string/title_milage_fee"
+        android:layout_below="@id/carDistanceTv"
+        style="@style/BoldS"
+        android:layout_marginTop="@dimen/margin_xSmall"
+        android:layout_toEndOf="@id/rentalFeeTitleTv"
+        android:layout_marginStart="@dimen/margin_3xlarge"
+        android:textColor="@color/textColorGrey"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/mileageFeeTv"
+        android:layout_width="wrap_content"
+        tools:text="$3.00/km"
+        android:layout_below="@id/mileageFeeTitleTv"
+        style="@style/LightN"
+        android:layout_marginTop="@dimen/margin_2xSmall"
+        android:layout_alignStart="@id/mileageFeeTitleTv"
+
+        android:textColor="@color/textColorWhite"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
